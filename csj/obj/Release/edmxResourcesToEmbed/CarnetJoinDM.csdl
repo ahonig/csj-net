@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjModelCarnetView" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="csjJoinCarnetsEntities">
+    <EntitySet Name="ListaCarnets" EntityType="csjModelCarnetView.ListaCarnets" />
+  </EntityContainer>
+  <EntityType Name="ListaCarnets">
+    <Key>
+      <PropertyRef Name="carnet_qr" />
+      <PropertyRef Name="nombres" />
+      <PropertyRef Name="apellidos" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="carnet_qr" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="documento_nro" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="nombres" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="apellidos" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_expedicion" Type="DateTime" />
+    <Property Name="fecha_vencimiento" Type="DateTime" />
+    <Property Name="liquidacion_nro" Type="String" />
+  </EntityType>
+</Schema>

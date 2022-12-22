@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Content/corte_suprema.png">
+      <publishTime>07/20/2022 14:43:21</publishTime>
+    </File>
+    <File Include="bin/Content/font/Montserrat-Bold.ttf">
+      <publishTime>07/20/2022 15:07:43</publishTime>
+    </File>
+    <File Include="bin/Content/pattern.svg">
+      <publishTime>07/10/2022 08:32:53</publishTime>
+    </File>
+    <File Include="bin/csj.dll">
+      <publishTime>12/16/2022 09:49:00</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.Compact.dll">
+      <publishTime>08/14/2010 13:55:08</publishTime>
+    </File>
+    <File Include="bin/Scripts/application.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/arrive.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-material-design.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-notify.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-selectpicker.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-tagsinput.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap-tourist.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/bootstrap.min.js">
+      <publishTime>07/10/2022 07:26:01</publishTime>
+    </File>
+    <File Include="bin/Scripts/chartist.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/ckeditor.js">
+      <publishTime>06/01/2020 04:56:28</publishTime>
+    </File>
+    <File Include="bin/Scripts/ckeditor.js.map">
+      <publishTime>07/14/2022 13:58:01</publishTime>
+    </File>
+    <File Include="bin/Scripts/core.js">
+      <publishTime>05/04/2020 12:09:17</publishTime>
+    </File>
+    <File Include="bin/Scripts/demo.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/fullcalendar.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jasny-bootstrap.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-1.4.1.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-1.4.1.min-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-1.4.1.min.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-3.4.1.min.js">
+      <publishTime>07/10/2022 07:17:55</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery-jvectormap.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.bootstrap-wizard.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.dataTables.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.qrcode.js">
+      <publishTime>07/21/2022 18:51:08</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.sharrre.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.validate-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.validate.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.validate.min-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/jquery.validate.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/jspdf.umd.min.js">
+      <publishTime>07/19/2022 12:02:16</publishTime>
+    </File>
+    <File Include="bin/Scripts/jspdf.umd.min.js.map">
+      <publishTime>02/11/2022 12:34:56</publishTime>
+    </File>
+    <File Include="bin/Scripts/material-dashboard.js">
+      <publishTime>07/14/2022 13:55:59</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftAjax.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftAjax.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftMvcAjax.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftMvcAjax.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftMvcValidation.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/MicrosoftMvcValidation.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="bin/Scripts/moment.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/Montserrat-Bold-bold.js">
+      <publishTime>07/20/2022 14:50:32</publishTime>
+    </File>
+    <File Include="bin/Scripts/nouislider.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/perfect-scrollbar.jquery.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/popper.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/qrcode.js">
+      <publishTime>07/21/2022 18:51:08</publishTime>
+    </File>
+    <File Include="bin/Scripts/qrcode.min.js">
+      <publishTime>07/22/2022 09:05:31</publishTime>
+    </File>
+    <File Include="bin/Scripts/sweetalert2.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/tour.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="bin/Scripts/webcam.min.js">
+      <publishTime>07/18/2022 21:53:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/10/2022 07:29:24</publishTime>
+    </File>
+    <File Include="Content/corte.css">
+      <publishTime>12/06/2022 04:03:57</publishTime>
+    </File>
+    <File Include="Content/corte_suprema.png">
+      <publishTime>07/20/2022 14:43:21</publishTime>
+    </File>
+    <File Include="Content/corte_suprema.svg">
+      <publishTime>07/10/2022 08:08:10</publishTime>
+    </File>
+    <File Include="Content/dashboard.css">
+      <publishTime>07/09/2022 15:41:59</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>07/09/2022 15:42:28</publishTime>
+    </File>
+    <File Include="Content/font/Montserrat-Bold.ttf">
+      <publishTime>07/20/2022 15:07:43</publishTime>
+    </File>
+    <File Include="Content/fontawesome.css">
+      <publishTime>07/09/2022 15:41:36</publishTime>
+    </File>
+    <File Include="Content/img/bussines-avatar-3x4.jpg">
+      <publishTime>07/15/2022 15:46:56</publishTime>
+    </File>
+    <File Include="Content/img/sidebar-1.jpg">
+      <publishTime>07/14/2022 17:25:42</publishTime>
+    </File>
+    <File Include="Content/index.css">
+      <publishTime>07/09/2022 18:02:46</publishTime>
+    </File>
+    <File Include="Content/pattern.png">
+      <publishTime>07/20/2022 14:43:21</publishTime>
+    </File>
+    <File Include="Content/pattern.svg">
+      <publishTime>07/10/2022 08:32:53</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/application.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/arrive.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-material-design.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-notify.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-selectpicker.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-tagsinput.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-tourist.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>07/10/2022 07:26:01</publishTime>
+    </File>
+    <File Include="Scripts/chartist.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/ckeditor.js">
+      <publishTime>06/01/2020 04:56:28</publishTime>
+    </File>
+    <File Include="Scripts/ckeditor.js.map">
+      <publishTime>07/14/2022 13:58:01</publishTime>
+    </File>
+    <File Include="Scripts/core.js">
+      <publishTime>05/04/2020 12:09:17</publishTime>
+    </File>
+    <File Include="Scripts/demo.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jasny-bootstrap.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>07/10/2022 07:17:55</publishTime>
+    </File>
+    <File Include="Scripts/jquery-jvectormap.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bootstrap-wizard.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.qrcode.js">
+      <publishTime>07/21/2022 18:51:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.sharrre.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min-vsdoc.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/jspdf.umd.min.js">
+      <publishTime>07/19/2022 12:02:16</publishTime>
+    </File>
+    <File Include="Scripts/jspdf.umd.min.js.map">
+      <publishTime>02/11/2022 12:34:56</publishTime>
+    </File>
+    <File Include="Scripts/material-dashboard.js">
+      <publishTime>07/14/2022 13:55:59</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftAjax.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftAjax.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftMvcAjax.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftMvcAjax.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftMvcValidation.debug.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftMvcValidation.js">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/Montserrat-Bold-bold.js">
+      <publishTime>07/20/2022 14:50:32</publishTime>
+    </File>
+    <File Include="Scripts/nouislider.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/perfect-scrollbar.jquery.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/qrcode.js">
+      <publishTime>07/21/2022 18:51:08</publishTime>
+    </File>
+    <File Include="Scripts/qrcode.min.js">
+      <publishTime>07/22/2022 09:05:31</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert2.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/tour.js">
+      <publishTime>03/30/2022 04:15:11</publishTime>
+    </File>
+    <File Include="Scripts/webcam.min.js">
+      <publishTime>07/18/2022 21:53:26</publishTime>
+    </File>
+    <File Include="Views/Account/ChangePassword.aspx">
+      <publishTime>09/10/2022 17:58:29</publishTime>
+    </File>
+    <File Include="Views/Account/ChangePasswordSuccess.aspx">
+      <publishTime>09/10/2022 18:10:14</publishTime>
+    </File>
+    <File Include="Views/Account/List.aspx">
+      <publishTime>09/10/2022 18:19:25</publishTime>
+    </File>
+    <File Include="Views/Account/LogOn.aspx">
+      <publishTime>09/06/2022 07:40:40</publishTime>
+    </File>
+    <File Include="Views/Account/Register.aspx">
+      <publishTime>09/10/2022 18:03:09</publishTime>
+    </File>
+    <File Include="Views/Home/About.aspx">
+      <publishTime>07/09/2022 18:34:09</publishTime>
+    </File>
+    <File Include="Views/Home/Carnet.aspx">
+      <publishTime>12/16/2022 04:40:57</publishTime>
+    </File>
+    <File Include="Views/Home/Copia de List.aspx">
+      <publishTime>09/06/2022 21:16:15</publishTime>
+    </File>
+    <File Include="Views/Home/Imprimir.aspx">
+      <publishTime>12/06/2022 05:50:32</publishTime>
+    </File>
+    <File Include="Views/Home/Index.aspx">
+      <publishTime>07/13/2022 18:55:35</publishTime>
+    </File>
+    <File Include="Views/Home/List.aspx">
+      <publishTime>12/06/2022 04:49:08</publishTime>
+    </File>
+    <File Include="Views/Public/Index.aspx">
+      <publishTime>12/16/2022 06:16:02</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.aspx">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Views/Shared/LogOnUserControl.ascx">
+      <publishTime>07/09/2022 15:31:13</publishTime>
+    </File>
+    <File Include="Views/Shared/Site.Master">
+      <publishTime>12/06/2022 05:37:57</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/09/2022 15:03:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/16/2022 05:55:30</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

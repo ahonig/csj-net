@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="csjModelDomicilioStoreContainer" CdmEntityContainer="csjEntityDomicilio">
+    <EntitySetMapping Name="domicilio">
+      <EntityTypeMapping TypeName="IsTypeOf(csjModelDomicilio.domicilio)">
+        <MappingFragment StoreEntitySet="domicilio">
+          <ScalarProperty Name="domicilio_id" ColumnName="domicilio_id" />
+          <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+          <ScalarProperty Name="profesional_tipo_id" ColumnName="profesional_tipo_id" />
+          <ScalarProperty Name="domicilio_tipo" ColumnName="domicilio_tipo" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+          <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+          <ScalarProperty Name="correo_electronico" ColumnName="correo_electronico" />
+          <ScalarProperty Name="localidad_codigo" ColumnName="localidad_codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

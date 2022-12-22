@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="csjProfesionalTipoModelStoreContainer" CdmEntityContainer="csjEntityProfesionalTipo">
+    <EntitySetMapping Name="profesional_tipo">
+      <EntityTypeMapping TypeName="IsTypeOf(csjProfesionalTipoModel.profesional_tipo)">
+        <MappingFragment StoreEntitySet="profesional_tipo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

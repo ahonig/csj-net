@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjPersonaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="csjPersonaModelStoreContainer">
+    <EntitySet Name="persona" EntityType="csjPersonaModel.Store.persona" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="persona">
+    <Key>
+      <PropertyRef Name="persona_id" />
+    </Key>
+    <Property Name="persona_id" Type="int" Nullable="false" />
+    <Property Name="documento_tipo_id" Type="smallint" />
+    <Property Name="documento_nro" Type="varchar" MaxLength="8" />
+    <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="nacimiento" Type="date" />
+  </EntityType>
+</Schema>

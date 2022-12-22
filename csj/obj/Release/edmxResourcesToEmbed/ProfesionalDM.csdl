@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjProfesionalModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="csjEntityProfesional">
+    <EntitySet Name="profesional" EntityType="csjProfesionalModel.profesional" />
+  </EntityContainer>
+  <EntityType Name="profesional">
+    <Key>
+      <PropertyRef Name="persona_id" />
+      <PropertyRef Name="profesional_tipo_id" />
+    </Key>
+    <Property Name="persona_id" Type="Int32" Nullable="false" />
+    <Property Name="profesional_tipo_id" Type="Int16" Nullable="false" />
+    <Property Name="matricula_nro" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="matricula_fecha_expedicion" Type="DateTime" Precision="0" />
+    <Property Name="juramento_acta_nro" Type="Int32" />
+    <Property Name="juramento_fecha" Type="DateTime" Precision="0" />
+    <Property Name="habilitado" Type="Boolean" />
+    <Property Name="universidad" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="egreso_anyo" Type="Int16" />
+    <Property Name="antecedente_penal" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="legajo_archivo_nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

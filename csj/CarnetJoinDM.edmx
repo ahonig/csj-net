@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="csjModelCarnetView.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="csjModelCarnetViewStoreContainer">
+          <EntitySet Name="ListaCarnets" EntityType="csjModelCarnetView.Store.ListaCarnets" store:Type="Views" store:Schema="dbo" store:Name="ListaCarnets">
+            <DefiningQuery>SELECT 
+      [ListaCarnets].[carnet_qr] AS [carnet_qr], 
+      [ListaCarnets].[documento_nro] AS [documento_nro], 
+      [ListaCarnets].[nombres] AS [nombres], 
+      [ListaCarnets].[apellidos] AS [apellidos], 
+      [ListaCarnets].[descripcion] AS [descripcion], 
+      [ListaCarnets].[fecha_expedicion] AS [fecha_expedicion], 
+      [ListaCarnets].[fecha_vencimiento] AS [fecha_vencimiento], 
+      [ListaCarnets].[liquidacion_nro] AS [liquidacion_nro]
+      FROM [dbo].[ListaCarnets] AS [ListaCarnets]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'csj.dbo.ListaCarnets' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de sólo lectura.
+      -->
+        <EntityType Name="ListaCarnets">
+          <Key>
+            <PropertyRef Name="carnet_qr" />
+            <PropertyRef Name="nombres" />
+            <PropertyRef Name="apellidos" />
+            <PropertyRef Name="descripcion" />
+          </Key>
+          <Property Name="carnet_qr" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="documento_nro" Type="varchar" MaxLength="8" />
+          <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="fecha_expedicion" Type="date" />
+          <Property Name="fecha_vencimiento" Type="date" />
+          <Property Name="liquidacion_nro" Type="nchar" MaxLength="10" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="csjModelCarnetView" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="csjJoinCarnetsEntities">
+          <EntitySet Name="ListaCarnets" EntityType="csjModelCarnetView.ListaCarnets" />
+        </EntityContainer>
+        <EntityType Name="ListaCarnets">
+          <Key>
+            <PropertyRef Name="carnet_qr" />
+            <PropertyRef Name="nombres" />
+            <PropertyRef Name="apellidos" />
+            <PropertyRef Name="descripcion" />
+          </Key>
+          <Property Name="carnet_qr" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="documento_nro" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_expedicion" Type="DateTime" />
+          <Property Name="fecha_vencimiento" Type="DateTime" />
+          <Property Name="liquidacion_nro" Type="String" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="csjModelCarnetViewStoreContainer" CdmEntityContainer="csjJoinCarnetsEntities">
+          <EntitySetMapping Name="ListaCarnets">
+            <EntityTypeMapping TypeName="IsTypeOf(csjModelCarnetView.ListaCarnets)">
+              <MappingFragment StoreEntitySet="ListaCarnets">
+                <ScalarProperty Name="carnet_qr" ColumnName="carnet_qr" />
+                <ScalarProperty Name="documento_nro" ColumnName="documento_nro" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_expedicion" ColumnName="fecha_expedicion" />
+                <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+                <ScalarProperty Name="liquidacion_nro" ColumnName="liquidacion_nro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="CarnetJoinDM">
+        <EntityTypeShape EntityType="csjModelCarnetView.ListaCarnets" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083331" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

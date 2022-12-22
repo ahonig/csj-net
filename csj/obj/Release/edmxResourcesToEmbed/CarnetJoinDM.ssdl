@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjModelCarnetView.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="csjModelCarnetViewStoreContainer">
+    <EntitySet Name="ListaCarnets" EntityType="csjModelCarnetView.Store.ListaCarnets" store:Type="Views" store:Schema="dbo" store:Name="ListaCarnets">
+      <DefiningQuery>SELECT 
+      [ListaCarnets].[carnet_qr] AS [carnet_qr], 
+      [ListaCarnets].[documento_nro] AS [documento_nro], 
+      [ListaCarnets].[nombres] AS [nombres], 
+      [ListaCarnets].[apellidos] AS [apellidos], 
+      [ListaCarnets].[descripcion] AS [descripcion], 
+      [ListaCarnets].[fecha_expedicion] AS [fecha_expedicion], 
+      [ListaCarnets].[fecha_vencimiento] AS [fecha_vencimiento], 
+      [ListaCarnets].[liquidacion_nro] AS [liquidacion_nro]
+      FROM [dbo].[ListaCarnets] AS [ListaCarnets]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'csj.dbo.ListaCarnets' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de sólo lectura.
+      -->
+  <EntityType Name="ListaCarnets">
+    <Key>
+      <PropertyRef Name="carnet_qr" />
+      <PropertyRef Name="nombres" />
+      <PropertyRef Name="apellidos" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="carnet_qr" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="documento_nro" Type="varchar" MaxLength="8" />
+    <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="fecha_expedicion" Type="date" />
+    <Property Name="fecha_vencimiento" Type="date" />
+    <Property Name="liquidacion_nro" Type="nchar" MaxLength="10" />
+  </EntityType>
+</Schema>

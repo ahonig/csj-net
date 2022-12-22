@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="csjProfesionalModelStoreContainer" CdmEntityContainer="csjEntityProfesional">
+    <EntitySetMapping Name="profesional">
+      <EntityTypeMapping TypeName="IsTypeOf(csjProfesionalModel.profesional)">
+        <MappingFragment StoreEntitySet="profesional">
+          <ScalarProperty Name="legajo_archivo_nombre" ColumnName="legajo_archivo_nombre" />
+          <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+          <ScalarProperty Name="profesional_tipo_id" ColumnName="profesional_tipo_id" />
+          <ScalarProperty Name="matricula_nro" ColumnName="matricula_nro" />
+          <ScalarProperty Name="matricula_fecha_expedicion" ColumnName="matricula_fecha_expedicion" />
+          <ScalarProperty Name="juramento_acta_nro" ColumnName="juramento_acta_nro" />
+          <ScalarProperty Name="juramento_fecha" ColumnName="juramento_fecha" />
+          <ScalarProperty Name="habilitado" ColumnName="habilitado" />
+          <ScalarProperty Name="universidad" ColumnName="universidad" />
+          <ScalarProperty Name="egreso_anyo" ColumnName="egreso_anyo" />
+          <ScalarProperty Name="antecedente_penal" ColumnName="antecedente_penal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjCarnetModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="csjEntityCarnet">
+    <EntitySet Name="carnet" EntityType="csjCarnetModel.carnet" />
+  </EntityContainer>
+  <EntityType Name="carnet">
+    <Key>
+      <PropertyRef Name="carnet_qr" />
+    </Key>
+    <Property Name="carnet_qr" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="persona_id" Type="Int32" Nullable="false" />
+    <Property Name="profesional_tipo_id" Type="Int16" Nullable="false" />
+    <Property Name="impreso" Type="Boolean" Nullable="false" />
+    <Property Name="turno_id" Type="Int32" />
+    <Property Name="fecha_expedicion" Type="DateTime" />
+    <Property Name="fecha_vencimiento" Type="DateTime" />
+    <Property Name="liquidacion_nro" Type="String" />
+  </EntityType>
+</Schema>

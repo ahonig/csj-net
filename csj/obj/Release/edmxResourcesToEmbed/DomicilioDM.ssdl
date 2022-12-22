@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjModelDomicilio.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="csjModelDomicilioStoreContainer">
+    <EntitySet Name="domicilio" EntityType="csjModelDomicilio.Store.domicilio" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="domicilio">
+    <Key>
+      <PropertyRef Name="domicilio_id" />
+    </Key>
+    <Property Name="domicilio_id" Type="int" Nullable="false" />
+    <Property Name="persona_id" Type="int" />
+    <Property Name="profesional_tipo_id" Type="smallint" />
+    <Property Name="domicilio_tipo" Type="varchar" MaxLength="16" />
+    <Property Name="localidad" Type="varchar" MaxLength="255" />
+    <Property Name="calle" Type="varchar" MaxLength="255" />
+    <Property Name="telefono1" Type="varchar" MaxLength="64" />
+    <Property Name="telefono2" Type="varchar" MaxLength="64" />
+    <Property Name="correo_electronico" Type="varchar" MaxLength="128" />
+    <Property Name="localidad_codigo" Type="int" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="csjModelCarnetViewStoreContainer" CdmEntityContainer="csjJoinCarnetsEntities">
+    <EntitySetMapping Name="ListaCarnets">
+      <EntityTypeMapping TypeName="IsTypeOf(csjModelCarnetView.ListaCarnets)">
+        <MappingFragment StoreEntitySet="ListaCarnets">
+          <ScalarProperty Name="carnet_qr" ColumnName="carnet_qr" />
+          <ScalarProperty Name="documento_nro" ColumnName="documento_nro" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_expedicion" ColumnName="fecha_expedicion" />
+          <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+          <ScalarProperty Name="liquidacion_nro" ColumnName="liquidacion_nro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

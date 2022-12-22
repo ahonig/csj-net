@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjPersonaModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="csjEntityPersona">
+    <EntitySet Name="persona" EntityType="csjPersonaModel.persona" />
+  </EntityContainer>
+  <EntityType Name="persona">
+    <Key>
+      <PropertyRef Name="persona_id" />
+    </Key>
+    <Property Name="persona_id" Type="Int32" Nullable="false" />
+    <Property Name="documento_tipo_id" Type="Int16" />
+    <Property Name="documento_nro" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="nombres" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="apellidos" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="nacimiento" Type="DateTime" />
+  </EntityType>
+</Schema>

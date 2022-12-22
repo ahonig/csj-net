@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjModelDomicilio" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="csjEntityDomicilio">
+    <EntitySet Name="domicilio" EntityType="csjModelDomicilio.domicilio" />
+  </EntityContainer>
+  <EntityType Name="domicilio">
+    <Key>
+      <PropertyRef Name="domicilio_id" />
+    </Key>
+    <Property Name="domicilio_id" Type="Int32" Nullable="false" />
+    <Property Name="persona_id" Type="Int32" />
+    <Property Name="profesional_tipo_id" Type="Int16" />
+    <Property Name="domicilio_tipo" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="localidad" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="calle" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="telefono1" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="telefono2" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+    <Property Name="correo_electronico" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="localidad_codigo" Type="Int32" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="csjProfesionalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="csjProfesionalModelStoreContainer">
+          <EntitySet Name="profesional" EntityType="csjProfesionalModel.Store.profesional" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="profesional">
+          <Key>
+            <PropertyRef Name="persona_id" />
+            <PropertyRef Name="profesional_tipo_id" />
+          </Key>
+          <Property Name="persona_id" Type="int" Nullable="false" />
+          <Property Name="profesional_tipo_id" Type="smallint" Nullable="false" />
+          <Property Name="matricula_nro" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="matricula_fecha_expedicion" Type="date" />
+          <Property Name="juramento_acta_nro" Type="int" />
+          <Property Name="juramento_fecha" Type="date" />
+          <Property Name="habilitado" Type="bit" />
+          <Property Name="universidad" Type="varchar" MaxLength="255" />
+          <Property Name="egreso_anyo" Type="smallint" />
+          <Property Name="antecedente_penal" Type="text" />
+          <Property Name="legajo_archivo_nombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="csjProfesionalModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="csjEntityProfesional">
+          <EntitySet Name="profesional" EntityType="csjProfesionalModel.profesional" />
+        </EntityContainer>
+        <EntityType Name="profesional">
+          <Key>
+            <PropertyRef Name="persona_id" />
+            <PropertyRef Name="profesional_tipo_id" />
+          </Key>
+          <Property Name="persona_id" Type="Int32" Nullable="false" />
+          <Property Name="profesional_tipo_id" Type="Int16" Nullable="false" />
+          <Property Name="matricula_nro" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="matricula_fecha_expedicion" Type="DateTime" Precision="0" />
+          <Property Name="juramento_acta_nro" Type="Int32" />
+          <Property Name="juramento_fecha" Type="DateTime" Precision="0" />
+          <Property Name="habilitado" Type="Boolean" />
+          <Property Name="universidad" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="egreso_anyo" Type="Int16" />
+          <Property Name="antecedente_penal" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="legajo_archivo_nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="csjProfesionalModelStoreContainer" CdmEntityContainer="csjEntityProfesional">
+          <EntitySetMapping Name="profesional">
+            <EntityTypeMapping TypeName="IsTypeOf(csjProfesionalModel.profesional)">
+              <MappingFragment StoreEntitySet="profesional">
+                <ScalarProperty Name="legajo_archivo_nombre" ColumnName="legajo_archivo_nombre" />
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+                <ScalarProperty Name="profesional_tipo_id" ColumnName="profesional_tipo_id" />
+                <ScalarProperty Name="matricula_nro" ColumnName="matricula_nro" />
+                <ScalarProperty Name="matricula_fecha_expedicion" ColumnName="matricula_fecha_expedicion" />
+                <ScalarProperty Name="juramento_acta_nro" ColumnName="juramento_acta_nro" />
+                <ScalarProperty Name="juramento_fecha" ColumnName="juramento_fecha" />
+                <ScalarProperty Name="habilitado" ColumnName="habilitado" />
+                <ScalarProperty Name="universidad" ColumnName="universidad" />
+                <ScalarProperty Name="egreso_anyo" ColumnName="egreso_anyo" />
+                <ScalarProperty Name="antecedente_penal" ColumnName="antecedente_penal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="ProfesionalDM">
+        <EntityTypeShape EntityType="csjProfesionalModel.profesional" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

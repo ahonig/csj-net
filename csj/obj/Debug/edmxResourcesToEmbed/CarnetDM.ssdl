@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjCarnetModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="csjCarnetModelStoreContainer">
+    <EntitySet Name="carnet" EntityType="csjCarnetModel.Store.carnet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="carnet">
+    <Key>
+      <PropertyRef Name="carnet_qr" />
+    </Key>
+    <Property Name="carnet_qr" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="persona_id" Type="int" Nullable="false" />
+    <Property Name="profesional_tipo_id" Type="smallint" Nullable="false" />
+    <Property Name="impreso" Type="bit" Nullable="false" />
+    <Property Name="turno_id" Type="int" />
+    <Property Name="fecha_expedicion" Type="date" />
+    <Property Name="fecha_vencimiento" Type="date" />
+    <Property Name="liquidacion_nro" Type="nchar" MaxLength="10" />
+  </EntityType>
+</Schema>

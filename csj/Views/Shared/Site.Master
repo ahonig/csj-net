@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<% 
+    var usuario = "";
+    if (Membership.GetUser() != null)
+    {
+        usuario = Membership.GetUser().UserName;
+    }
+    
+%>
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+
+        <style>
+            .async-hide { opacity: 0 !important }
+            .validation-summary-errors { color: white !important; margin-left: 10px; margin-right: 10px; }
+            .field-validation-error { color: Red !important }
+        </style>
+        <link type="text/css" rel="stylesheet" href="<%=ResolveClientUrl("~/Content/index.css") %>">
+        <link type="text/css" rel="stylesheet" href="<%=ResolveClientUrl("~/Content/dashboard.css") %>">
+        <meta charset="utf-8" content="">
+        <meta name="google" content="notranslate">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+        <link rel="shortcut icon" type="image/x-icon" href="~/favico.ico" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Content/font-awesome.min.css") %>">
+        
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/popper.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-material-design.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/perfect-scrollbar.jquery.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/moment.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/sweetalert2.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.validate.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.bootstrap-wizard.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-selectpicker.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-datetimepicker.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.dataTables.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-tagsinput.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jasny-bootstrap.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-tourist.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/fullcalendar.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery-jvectormap.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/nouislider.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/core.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/arrive.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/chartist.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap-notify.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/material-dashboard.js?v=2.1.0") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/application.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.sharrre.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/webcam.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jspdf.umd.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/Montserrat-Bold-bold.js") %>"></script>
+    </head>
+
+    <body class="sidebar-mini">
+           <div class="wrapper">
+                <div class="sidebar" data-color="azure" data-background-color="black" data-image="Content/img/sidebar-1.jpg">
+
+	                <div class="sidebar-wrapper" style="height: 100vh">
+                		
+		                <ul class="nav">
+			                <li class="nav-item ">
+				                <a class="nav-link" href="<%= Url.Action("Index","Home") %>">
+					                <i class="material-icons">home</i>
+					                <p> Inicio </p>
+				                </a>
+			                </li>
+			                <% if ( Membership.GetUser() != null) { %>
+			                <li class="nav-item ">
+				                <a class="nav-link" href="<%= Url.Action("Carnet","Home") %>">
+					                <i class="material-icons">portrait</i>
+					                <p> Nuevo Carnet </p>
+				                </a>
+			                </li>
+			                <% } %>
+			                <% if (usuario.ToUpper() == "ADMIN") { %>
+			                <li class="nav-item ">
+				                <a class="nav-link" href="<%= Url.Action("List","Home") %>">
+					                <i class="material-icons">assignment</i>
+					                <p> Lista de Carnets </p>
+				                </a>
+			                </li>
+			                <li class="nav-item ">
+				                <a class="nav-link" href="<%= Url.Action("List","Account") %>">
+					                <i class="material-icons">manage_accounts</i>
+					                <p> Usuarios </p>
+				                </a>
+			                </li>
+			                <% } %>
+			                <% if ( Membership.GetUser() == null) { %>
+			                <li class="nav-item ">   
+                                <a class="nav-link" href="<%= Url.Action("LogOn","Account") %>">
+					                <i class="material-icons">fingerprint</i>
+					                <p> Login </p>
+				                </a>
+			                </li>
+                            <% } %>
+		                </ul>
+	                </div>
+                </div>
+                
+                <div class="main-panel">
+                    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                        <div class="container-fluid">
+
+                            <% if (Membership.GetUser() != null) { %>
+                            <div class="collapse navbar-collapse justify-content-end">
+	                            <ul class="navbar-nav" id="logout">
+		                            <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <%= usuario.ToUpper() %><i class="material-icons">person</i>
+                                            <p class="d-lg-none d-md-block"> Account </p>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                            <a class="dropdown-item" href="<%= Url.Action("ChangePassword","Account") %>">Cambiar clave</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" id="logout-btn" href="<%= Url.Action("LogOff","Account") %>">Salir</a>
+                                        </div>
+                                    </li>
+	                            </ul>
+                    			
+                            </div>
+                            <% } %>
+                        </div>
+                    </nav>
+                    <div id="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+                    </div>
+                </div>
+          </div>
+    </body>
+    
+    
+    
+</html>

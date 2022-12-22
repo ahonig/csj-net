@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csjProfesionalTipoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="csjProfesionalTipoModelStoreContainer">
+    <EntitySet Name="profesional_tipo" EntityType="csjProfesionalTipoModel.Store.profesional_tipo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="profesional_tipo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="smallint" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="visible" Type="bit" Nullable="false" />
+  </EntityType>
+</Schema>

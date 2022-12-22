@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="csjPersonaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="csjPersonaModelStoreContainer">
+          <EntitySet Name="persona" EntityType="csjPersonaModel.Store.persona" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="persona_id" />
+          </Key>
+          <Property Name="persona_id" Type="int" Nullable="false" />
+          <Property Name="documento_tipo_id" Type="smallint" />
+          <Property Name="documento_nro" Type="varchar" MaxLength="8" />
+          <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="sexo" Type="char" MaxLength="1" />
+          <Property Name="nacimiento" Type="date" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="csjPersonaModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="csjEntityPersona">
+          <EntitySet Name="persona" EntityType="csjPersonaModel.persona" />
+        </EntityContainer>
+        <EntityType Name="persona">
+          <Key>
+            <PropertyRef Name="persona_id" />
+          </Key>
+          <Property Name="persona_id" Type="Int32" Nullable="false" />
+          <Property Name="documento_tipo_id" Type="Int16" />
+          <Property Name="documento_nro" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="sexo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="nacimiento" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="csjPersonaModelStoreContainer" CdmEntityContainer="csjEntityPersona">
+          <EntitySetMapping Name="persona">
+            <EntityTypeMapping TypeName="IsTypeOf(csjPersonaModel.persona)">
+              <MappingFragment StoreEntitySet="persona">
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+                <ScalarProperty Name="documento_tipo_id" ColumnName="documento_tipo_id" />
+                <ScalarProperty Name="documento_nro" ColumnName="documento_nro" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="nacimiento" ColumnName="nacimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PersonasDM">
+        <EntityTypeShape EntityType="csjPersonaModel.persona" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

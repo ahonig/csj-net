@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="csjModelDomicilio.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="csjModelDomicilioStoreContainer">
+          <EntitySet Name="domicilio" EntityType="csjModelDomicilio.Store.domicilio" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="domicilio">
+          <Key>
+            <PropertyRef Name="domicilio_id" />
+          </Key>
+          <Property Name="domicilio_id" Type="int" Nullable="false" />
+          <Property Name="persona_id" Type="int" />
+          <Property Name="profesional_tipo_id" Type="smallint" />
+          <Property Name="domicilio_tipo" Type="varchar" MaxLength="16" />
+          <Property Name="localidad" Type="varchar" MaxLength="255" />
+          <Property Name="calle" Type="varchar" MaxLength="255" />
+          <Property Name="telefono1" Type="varchar" MaxLength="64" />
+          <Property Name="telefono2" Type="varchar" MaxLength="64" />
+          <Property Name="correo_electronico" Type="varchar" MaxLength="128" />
+          <Property Name="localidad_codigo" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="csjModelDomicilio" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="csjEntityDomicilio">
+          <EntitySet Name="domicilio" EntityType="csjModelDomicilio.domicilio" />
+        </EntityContainer>
+        <EntityType Name="domicilio">
+          <Key>
+            <PropertyRef Name="domicilio_id" />
+          </Key>
+          <Property Name="domicilio_id" Type="Int32" Nullable="false" />
+          <Property Name="persona_id" Type="Int32" />
+          <Property Name="profesional_tipo_id" Type="Int16" />
+          <Property Name="domicilio_tipo" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="localidad" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="calle" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="telefono1" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="telefono2" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="correo_electronico" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="localidad_codigo" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="csjModelDomicilioStoreContainer" CdmEntityContainer="csjEntityDomicilio">
+          <EntitySetMapping Name="domicilio">
+            <EntityTypeMapping TypeName="IsTypeOf(csjModelDomicilio.domicilio)">
+              <MappingFragment StoreEntitySet="domicilio">
+                <ScalarProperty Name="domicilio_id" ColumnName="domicilio_id" />
+                <ScalarProperty Name="persona_id" ColumnName="persona_id" />
+                <ScalarProperty Name="profesional_tipo_id" ColumnName="profesional_tipo_id" />
+                <ScalarProperty Name="domicilio_tipo" ColumnName="domicilio_tipo" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+                <ScalarProperty Name="correo_electronico" ColumnName="correo_electronico" />
+                <ScalarProperty Name="localidad_codigo" ColumnName="localidad_codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="DomicilioDM">
+        <EntityTypeShape EntityType="csjModelDomicilio.domicilio" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
